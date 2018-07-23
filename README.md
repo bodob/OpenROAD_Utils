@@ -54,7 +54,7 @@ For Cygwin/Windows make sure to set the SHELLOPTS environment variable to ignore
 
     SET SHELLOPTS=igncr
 
-### `force_del_comp.bash `###
+### `force_del_comp.bash` ###
 
 Forces the deletion of an application component by deleting the rows for the component from the repository tables.  
 This is a kind of "last resort cleanup action" if the component in the repository got corrupted, so it could not be deleted from the Workbench or using the according command line utility (w4gldev destroyapp *database* *application* -c*component*).
