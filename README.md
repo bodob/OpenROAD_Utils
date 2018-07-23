@@ -18,7 +18,7 @@ The output of the export commands is written to the log file `expappcomps.log`.
 
 Additional requirement:
 
-- %`II_SYSTEM`%\ingres\bin\sql.exe (terminal monitor) must exist.
+- `%II_SYSTEM%\ingres\bin\sql.exe` (terminal monitor) must exist.
 
 Usage:
 
