@@ -2,7 +2,7 @@
 
 This repository contains tools and utilities which can be useful when working with Actian OpenROAD.
 
-## Tools for expoting & importing application and components ##
+## Tools for exporting & importing application and components ##
 
 The following tools can be used on Windows to export/import applications and components (one file per component) using XML export format.
 
