@@ -18,11 +18,11 @@ The output of the export commands is written to the log file `expappcomps.log`.
 
 Additional requirement:
 
-- %`II_SYSTEM`%\ingres\bin\sql.exe (terminal monitor) must exist.
+- `%II_SYSTEM%\ingres\bin\sql.exe` (terminal monitor) must exist.
 
 Usage:
 
-expappcomps `database` `application` [`backupapp flags`]
+    expappcomps database application [backupapp flags]
 
 ### `impappcomps.bat` ###
 
@@ -33,7 +33,7 @@ The output of the import commands is written to the log file `impappcomps.log`.
 
 Usage:
 
-impappcomps `database` `application` [`backupapp flags`]
+    impappcomps database application [backupapp flags]
 
 ### `impcomps.bat` ###
 
@@ -44,7 +44,7 @@ The output of the import commands is written to the log file `impcomps.log`.
 
 Usage:
 
-impcomps `database` `application` [`backupapp flags`]
+    impcomps database application [backupapp flags]
 
 ## Bash scripts ##
 
@@ -61,5 +61,4 @@ This is a kind of "last resort cleanup action" if the component in the repositor
 
 Usage:
 
-bash `force_del_comp.bash` `database` `application` `component`
-
+    bash force_del_comp.bash database application component
