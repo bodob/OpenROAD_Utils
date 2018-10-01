@@ -2,7 +2,45 @@
 
 This repository contains tools and utilities which can be useful when working with Actian OpenROAD.
 
-## Tools for exporting & importing application and components ##
+## Tools for handling all applications from a repository database ##
+
+Requirements:
+
+- The executables sql.exe and w4gldev.exe must exist in the %`II_SYSTEM`%\ingres\bin directory.
+- The current directory must be writable.
+
+### `expallapps.bat` ###
+
+Exports all applications in XML format from a database repository into the current directory.  
+It creates a list of all apllications in file `apps.lst`, then calls "w4gldev backupapp out" for each application (with -xml flag). 
+
+Usage:
+
+    expallapps database application [backupapp flags]
+
+Default "backupapp flags" are: `-Tyes,logonly -Lexpallapps.log -A`  
+When specifiying (overriding) them on command line, any flags containing comma or space have to be enclosed in double quotes.  
+You can use %A in order to specify separate log files for each application, e.g.:
+
+    expallapps myvnode::mydatabase "-Tyes,logonly" -L%A.log
+
+
+### `compileallapps.bat` ###
+
+Compiles all applications in a database repository.  
+It creates a list of all apllications in file `apps.lst`, then calls "w4gldev compileapp" for each application.
+
+Usage:
+
+    compileallapps database application [compileapp flags]
+    
+Default "compileapp flags" are: `-Tyes,logonly -Lcompileallapps.log -A`  
+When specifiying (overriding) them on command line, any flags containing comma or space have to be enclosed in double quotes.  
+You can use %A in order to specify separate log files for each application, e.g.:
+
+    compileallapps myvnode::mydatabase "-Tyes,logonly" -L%A.log
+
+## Tools for component-wise export & import of application and components ##
 
 The following tools can be used on Windows to export/import applications and components (one file per component) using XML export format.
 
