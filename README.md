@@ -75,7 +75,7 @@ Additional requirement:
 
 Usage:
 
-    expappcomps database [backupapp flags]
+    expallappcomps database [backupapp flags]
 
 ### `impappcomps.bat` ###
 
